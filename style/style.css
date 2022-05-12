@@ -1,0 +1,163 @@
+/* ====== GENERAL ====== */
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color:#141414;
+    --secundary-color:#E10A15;
+    --letter-color: white;
+}
+
+svg path {
+    fill: white;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--letter-color);
+    font-size: 62.5%;
+
+    background: var(--primary-color);
+}
+
+.wrapper {
+    margin-inline: 6%;
+}
+
+/* ====== NAVIGATION ====== */
+
+header {
+    font-size: 1rem;
+
+    padding: 0 4%;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.482) 20%, rgba(0, 0, 0, 0));
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 32%;
+
+    position: fixed;
+    z-index: 100;
+    
+    padding-block: 1.2%;
+
+    width: 100vw;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header .container nav a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--letter-color);
+
+}
+
+header .container {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+}
+
+header .container nav ul {
+    flex: 1;
+
+    min-width: 400px;
+
+    display: flex;
+
+    gap: 4%;
+    margin-left: 5%;
+
+    /* border: 1px solid white; */
+}
+
+header .container nav a:hover {
+    opacity: 0.5;
+
+    transition: 0.5s;
+}
+
+header .container:nth-child(1) {
+    justify-content: space-around;
+
+}
+
+header .container:nth-child(2) {
+    justify-content: flex-end;
+    gap: 10%;
+}
+
+header .container .logo {
+    width: 16%;
+}
+
+header .container svg {
+    width: 1.2em;
+}
+
+/* ====== SCROLL MENU ====== */
+header.scroll {
+    /* background-color: var(--primary-color); */
+
+    background: linear-gradient(rgba(0, 0, 0, 0.482) 20%, rgba(0, 0, 0, 0));
+
+    background-color: var(--primary-color);
+
+
+    transition: 0.5s;
+}
+
+/* ====== MINI NAVIGATION ====== */
+/* em andamento ... */
+
+header .container nav.mini-menu ul li {
+    display: none;
+}
+
+header .container nav ul::before {
+    content: 'navigation';
+
+    height: 10vh;
+    width: 400px;
+
+    z-index: 100;
+    top: 10vh;
+
+    display: none;
+    align-items: center;
+
+    text-align: center;
+
+    /* background: white; */
+    color: white;
+}
+
+/* ====== MAIN CONTENT ====== */
+
+main .main-image-wrapper  .image-description-layer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main .main-image-wrapper .image-main {
+    width: 100vw;
+}
+
+main .main-image-wrapper .image-description-layer {
+    position: absolute;
+    top: 20%;
+}
+
+main .main-image-wrapper .image-description-layer img {
+    width: 100%;
+}
