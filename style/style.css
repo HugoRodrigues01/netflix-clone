@@ -10,6 +10,8 @@
     --primary-color:#141414;
     --secundary-color:#E10A15;
     --letter-color: white;
+
+    font-size: 62.5%;
 }
 
 svg path {
@@ -19,9 +21,15 @@ svg path {
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: var(--letter-color);
-    font-size: 62.5%;
+    font-size: 1rem;
 
     background: var(--primary-color);
+
+    overflow: overlay;
+}
+
+main {
+    height: 100vh;
 }
 
 .wrapper {
@@ -56,13 +64,13 @@ header ul {
 
 header .container nav a {
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.1vw;
     color: var(--letter-color);
 
 }
 
 header .container {
-    flex: 1;
+    /* flex: 1; */
 
     display: flex;
     align-items: center;
@@ -71,14 +79,14 @@ header .container {
 header .container nav ul {
     flex: 1;
 
-    min-width: 400px;
+    width: 25vw;
 
     display: flex;
 
     gap: 4%;
-    margin-left: 5%;
+    margin-left: 2.3vw;
 
-    /* border: 1px solid white; */
+    /* border: 1px solid red; */
 }
 
 header .container nav a:hover {
@@ -87,10 +95,6 @@ header .container nav a:hover {
     transition: 0.5s;
 }
 
-header .container:nth-child(1) {
-    justify-content: space-around;
-
-}
 
 header .container:nth-child(2) {
     justify-content: flex-end;
@@ -102,7 +106,7 @@ header .container .logo {
 }
 
 header .container svg {
-    width: 1.2em;
+    width: 1.4vw;
 }
 
 /* ====== SCROLL MENU ====== */
@@ -144,9 +148,16 @@ header .container nav ul::before {
 
 /* ====== MAIN CONTENT ====== */
 
+/* IMAGE DESCRIPTION LAYER */
+
 main .main-image-wrapper  .image-description-layer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "A A"
+    "B B";
+    grid-template-columns: 1fr 25vw;
+
+    /* display: flex; */
 }
 
 main .main-image-wrapper .image-main {
@@ -155,9 +166,114 @@ main .main-image-wrapper .image-main {
 
 main .main-image-wrapper .image-description-layer {
     position: absolute;
-    top: 20%;
+    top: 13%;
 }
 
 main .main-image-wrapper .image-description-layer img {
-    width: 100%;
+    width: 40vw;
+}
+
+main .main-image-wrapper .image-infos-layer {
+    grid-area: A;
+}
+
+main .main-image-wrapper .image-infos-layer .infos {
+    margin-block: 3vw 1vw;
+
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+}
+
+main .main-image-wrapper .image-infos-layer .infos .suplemental-message svg[width*='24'] {
+    width: 2.4vw;
+    height: auto;
+}
+
+main .main-image-wrapper .image-infos-layer .infos .suplemental-message {
+    margin-bottom: 0.8vw;
+
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+}
+
+main .main-image-wrapper .image-infos-layer .infos p {
+    font-size: 1.2vw;
+    width: 50vw;
+}
+
+main .main-image-wrapper .image-infos-layer .infos .suplemental-message svg {
+    width: 2vw;
+}
+
+main .main-image-wrapper .image-infos-layer .infos .suplemental-message svg path {
+    fill: var(--secundary-color);
+}
+
+main .main-image-wrapper .image-infos-layer .infos .suplemental-message span {
+    font-size: 2vw;
+    margin-left: 1vw;
+}
+
+main .main-image-wrapper .image-description-layer .buttons-description-layer {
+    grid-area: B;
+
+    width: 50vw;
+    max-width: 500px;
+
+    margin-top: 1vw;
+
+    display: flex;
+    gap: 3%;
+
+   
+}
+
+main .main-image-wrapper .image-description-layer .buttons-description-layer button {
+    padding: 0.6vw 1vw;
+    border-radius: 5%;
+
+    font-size: 1.3vw;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    display: flex;
+    align-items: center;
+    gap: 6%;
+
+    cursor: pointer;
+}
+
+main .main-image-wrapper .image-description-layer button.button-watch {
+    background: white;
+}
+
+main .main-image-wrapper .image-description-layer button.button-watch:hover {
+    background: #dadada;
+
+    transition: background 0.1s;
+}
+
+main .main-image-wrapper .image-description-layer .buttons-description-layer .button-watch svg path {
+    fill: black;
+}
+
+main .main-image-wrapper .image-description-layer .buttons-description-layer button svg[width*='24'] {
+    width: 2.4vw;
+    height: auto;
+}
+
+main .main-image-wrapper .image-description-layer .buttons-description-layer button.button-more-information {
+    color: white;
+
+    background: #797574cf;
+}
+
+main .main-image-wrapper .image-description-layer .buttons-description-layer button.button-more-information:hover {
+    background: #797574a6;
+
+    transition: background 0.1s;
 }
