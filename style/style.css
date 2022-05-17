@@ -30,10 +30,20 @@ body {
 
 main {
     height: 100vh;
+
+    border: 1px solid red;
 }
 
 .wrapper {
-    margin-inline: 6%;
+    margin-inline: 4vw;
+
+    /* border: 1px solid red; */
+}
+
+.box-movie {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 /* ====== NAVIGATION ====== */
@@ -41,14 +51,7 @@ main {
 header {
     font-size: 1rem;
 
-    padding: 0 4%;
-
     background: linear-gradient(rgba(0, 0, 0, 0.482) 20%, rgba(0, 0, 0, 0));
-
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    align-items: center;
-    gap: 32%;
 
     position: fixed;
     z-index: 100;
@@ -56,6 +59,14 @@ header {
     padding-block: 1.2%;
 
     width: 100vw;
+}
+
+header .wrapper {
+    
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 32%;
 }
 
 header ul {
@@ -94,7 +105,6 @@ header .container nav a:hover {
 
     transition: 0.5s;
 }
-
 
 header .container:nth-child(2) {
     justify-content: flex-end;
@@ -160,8 +170,12 @@ main .main-image-wrapper  .image-description-layer {
     /* display: flex; */
 }
 
-main .main-image-wrapper .image-main {
+main  .main-image {
     width: 100vw;
+    position: absolute;
+    left: 0;
+
+    opacity: 0.8;
 }
 
 main .main-image-wrapper .image-description-layer {
@@ -170,7 +184,7 @@ main .main-image-wrapper .image-description-layer {
 }
 
 main .main-image-wrapper .image-description-layer img {
-    width: 40vw;
+    width: 35vw;
 }
 
 main .main-image-wrapper .image-infos-layer {
@@ -214,10 +228,10 @@ main .main-image-wrapper .image-infos-layer .infos .suplemental-message svg path
 
 main .main-image-wrapper .image-infos-layer .infos .suplemental-message span {
     font-size: 2vw;
-    margin-left: 1vw;
+    /* margin-left: 1vw; */
 }
 
-main .main-image-wrapper .image-description-layer .buttons-description-layer {
+main .main-image-wrapper .image-description-layer .buttons-layer {
     grid-area: B;
 
     width: 50vw;
@@ -231,7 +245,7 @@ main .main-image-wrapper .image-description-layer .buttons-description-layer {
    
 }
 
-main .main-image-wrapper .image-description-layer .buttons-description-layer button {
+main .main-image-wrapper .image-description-layer .buttons-layer button {
     padding: 0.6vw 1vw;
     border-radius: 5%;
 
@@ -257,23 +271,30 @@ main .main-image-wrapper .image-description-layer button.button-watch:hover {
     transition: background 0.1s;
 }
 
-main .main-image-wrapper .image-description-layer .buttons-description-layer .button-watch svg path {
+main .main-image-wrapper .image-description-layer .buttons-layer .button-watch svg path {
     fill: black;
 }
 
-main .main-image-wrapper .image-description-layer .buttons-description-layer button svg[width*='24'] {
+main .main-image-wrapper .image-description-layer .buttons-layer button svg[width*='24'] {
     width: 2.4vw;
     height: auto;
 }
 
-main .main-image-wrapper .image-description-layer .buttons-description-layer button.button-more-information {
+main .main-image-wrapper .image-description-layer .buttons-layer button.button-more-information {
     color: white;
 
     background: #797574cf;
 }
 
-main .main-image-wrapper .image-description-layer .buttons-description-layer button.button-more-information:hover {
+main .main-image-wrapper .image-description-layer .buttons-layer button.button-more-information:hover {
     background: #797574a6;
 
     transition: background 0.1s;
+}
+
+/* ====== CAROUSEL MOVIES ====== */
+
+main .carousel-movies-wrapper {
+    position: relative;
+    top: 50vw;
 }
