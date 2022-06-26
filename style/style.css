@@ -7,8 +7,8 @@
 }
 
 :root {
-    --primary-color:#141414;
-    --secundary-color:#E10A15;
+    --primary-color: #141414;
+    --secundary-color: #E10A15;
     --letter-color: white;
 
     font-size: 62.5%;
@@ -30,8 +30,6 @@ body {
 
 main {
     height: 100vh;
-
-    border: 1px solid red;
 }
 
 .wrapper {
@@ -55,14 +53,14 @@ header {
 
     position: fixed;
     z-index: 100;
-    
+
     padding-block: 1.2%;
 
     width: 100vw;
 }
 
 header .wrapper {
-    
+
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: center;
@@ -162,7 +160,7 @@ header .container nav ul::before {
 
 main .main-image-wrapper  .image-description-layer {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
     "A A"
     "B B";
     grid-template-columns: 1fr 25vw;
@@ -242,7 +240,7 @@ main .main-image-wrapper .image-description-layer .buttons-layer {
     display: flex;
     gap: 3%;
 
-   
+
 }
 
 main .main-image-wrapper .image-description-layer .buttons-layer button {
